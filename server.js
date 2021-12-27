@@ -25,8 +25,8 @@ app.get('/omergulen', (req, res) => {
 // Listen both http & https ports
 const httpServer = http.createServer(app);
 const httpsServer = https.createServer({
-    key: fs.readFileSync('/etc/letsencrypt/live/my_api_url/privkey.pem'),
-    cert: fs.readFileSync('/etc/letsencrypt/live/my_api_url/fullchain.pem'),
+    key: fs.readFileSync('../../etc/letsencrypt/live/metalcoding.eu/privkey.pem'),
+    cert: fs.readFileSync('../../etc/letsencrypt/live/metalcoding.eu/fullchain.pem'),
 }, app);
 
 httpServer.listen(80, () => {
